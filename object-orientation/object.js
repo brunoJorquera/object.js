@@ -8,7 +8,7 @@
 
 let me = {
   firstName: "Bruno",
-  age: 21,
+  age: 21.
 }
 
 console.log(me)
@@ -22,15 +22,26 @@ console.log(me)
 
 //Code here
 
+let dog = {
+  name: "Howard",
+  color: "brown",
+  age: 5,
+  goodBoy: true,
+}
+
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
 
+console.log(dog.name)
+
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
+
+console.log(dog["color"])
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -40,11 +51,25 @@ console.log(me)
 
 //Code here
 
+let favoriteThings = {
+  band: "The Wiggles",
+  food: "Fruit Salad",
+  person: "Bob Ross",
+  book: "The Hungry Hungry Catterpillar",
+  movie: "Spy Kids 4",
+  holiday: "Leaf-Erikson-Day"
+}
+
+console.log(favoriteThings)
+
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
+
+favoriteThings.car = "Volkswagen Beetle"
+favoriteThings.brand = "Baby Gap"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -52,6 +77,11 @@ console.log(me)
 */
 
 //Code here
+
+favoriteThings["food"] = "Chicken Nuggets"
+favoriteThings["book"] = "Harry Potter"
+
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 // Do not edit the code below.
@@ -73,12 +103,21 @@ var user = {
 
 //Code Here
 
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmounta.in"
+
+console.log(user)
+
 //////////////////////////// PROBLEM 7 ////////////////////////////
 /*
   Using the user object above, delete the users age off of the object.
 */
 
 //Code Here
+
+delete user.age
+
+console.log(user)
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 /*
@@ -89,6 +128,18 @@ var user = {
 
 //Code here
 
+class Cat{
+  constructor(name,age,color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
+
+let stevePaws = new Cat("Steve Paws",3,"white")
+
+console.log(stevePaws)
+
 //////////////////////////// PROBLEM 9 ////////////////////////////
 /*
   Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
@@ -98,6 +149,21 @@ var user = {
 */
 
 //Code here
+
+class Wizard{
+  constructor(name,age,favoriteSpell){
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+
+  castSpell(){
+    console.log(`${this.name} has cast ${this.favoriteSpell}!`)
+  }
+}
+
+let voldeTort = new Wizard("Voldetort",70,"Avadacalabradoodle")
+voldeTort.castSpell()
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 /*
@@ -124,6 +190,28 @@ var user = {
 
 //Code Here
 
+class Phone{
+  constructor(brand,model,storage,color,price,sold){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+
+  sell(){
+    if(this.sold === false){
+      return this.sold = true;
+    }
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+
+  changePrice(newPrice){
+  this.price = newPrice
+  }
+}
+
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -136,6 +224,10 @@ var user = {
 
 //Code Here
 
+let samsung = new Phone("Samsung","S8","64GB","black", 700)
+let iPhone = new Phone("iPhone","12","64GB","white", 750)
+let windows = new Phone("Windows","Mk1","64GB","red", 600)
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -145,6 +237,10 @@ var user = {
 
 //Code Here
 
+samsung.changePrice(650)
+
+console.log(samsung)
+
 /*
   Now call the sell method on one of your other phone objects
 
@@ -152,6 +248,9 @@ var user = {
 */
 
 //Code Here
+
+iPhone.sell()
+console.log(iPhone)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 
