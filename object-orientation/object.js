@@ -413,7 +413,7 @@ class Boat extends Vehicle{
   }
 
   performMaintenance(){
-    isSeaworthy = true;
+    this.isSeaworthy = true;
   }
 }
 
@@ -429,8 +429,9 @@ let myFirstBoat = new Boat("8 seats", "Blue", 3050, "S.S. BoatyBoat", "pontoon",
 /*
   Call the checkSeaworthiness method on your new boat
 */
-myFirstBoat.checkSeaworthiness()
 //Code Here
+
+myFirstBoat.checkSeaworthiness()
 
 /*
   Now run the performMaintenance method on your boat
@@ -438,8 +439,12 @@ myFirstBoat.checkSeaworthiness()
 
 //Code Here
 
+myFirstBoat.performMaintenance()
+
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+
+myFirstBoat.checkSeaworthiness()
