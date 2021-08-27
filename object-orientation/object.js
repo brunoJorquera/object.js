@@ -396,6 +396,27 @@ console.log(myFirstMotorcycle)
 
 //Code Here
 
+class Boat extends Vehicle{
+  constructor(capacity,color,mileage,name,type,isSeaworthy){
+    super(capacity,color,mileage)
+    this.name = name;
+    this.type = type;
+    this.type = isSeaworthy;
+  }
+
+  checkSeaworthiness(){
+    if(this.isSeaworthy === true){
+      console.log(`The ${this.color} ${this.type} ${this.name} is seaworthy!`)
+    } else{
+      console.log(`You need to get your ${this.type} in shape!`)
+    }
+  }
+
+  performMaintenance(){
+    isSeaworthy = true;
+  }
+}
+
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
   properties except isSeaworthy -- make that one false. Call your variable myFirstBoat.
@@ -403,10 +424,12 @@ console.log(myFirstMotorcycle)
 
 //Code Here
 
+let myFirstBoat = new Boat("8 seats", "Blue", 3050, "S.S. BoatyBoat", "pontoon", false )
+
 /*
   Call the checkSeaworthiness method on your new boat
 */
-
+myFirstBoat.checkSeaworthiness()
 //Code Here
 
 /*
